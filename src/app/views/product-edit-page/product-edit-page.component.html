@@ -1,0 +1,55 @@
+<div *ngIf="!success && this.product" class="wrapper">
+    <button class="details-button" routerLink="/products/{{product.id}}" type="button">
+        Back to {{product.productCode}}
+    </button>
+    <h1>Update Product</h1>
+    <form (ngSubmit)="updateProduct()" [formGroup]="productForm">
+  
+      <div class="form-group">
+
+        <div class="custom-input-fields">
+          <label for="title">Description</label>
+          <input [maxLength]="255" class="form-control" formControlName="description" id="description" name="description"
+                 type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="deliveryStart">Delivery Start</label>
+            <input class="form-control" formControlName="deliveryStart" id="deliveryStart" name="deliveryStart"
+                   type="date"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="deliveryEnd">Delivery End</label>
+            <input class="form-control" formControlName="deliveryEnd" id="deliveryEnd" name="deliveryEnd"
+                   type="date"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="tradingStart">Trading Start</label>
+            <input class="form-control" formControlName="tradingStart" id="tradingStart" name="tradingStart"
+                   type="date"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="tradingEnd">Trading End</label>
+            <input class="form-control" formControlName="tradingEnd" id="tradingEnd" name="tradingEnd"
+                   type="date"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="currency">Currency</label>
+            <ng-select [items]="currencies" 
+                bindLabel="currency" 
+                bindValue="id" 
+                formControlName="currency">
+            </ng-select>
+        </div>
+  
+        <div>
+          <button class="edit-button" type="submit" id="add-news">Update</button>
+        </div>
+  
+      </div>
+    </form>
+  </div>

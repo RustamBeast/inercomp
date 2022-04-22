@@ -11,6 +11,10 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailsPageComponent } from './views/product-details-page/product-details-page.component';
 import { ProductsPageComponent } from './views/products-page/products-page.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ProductEditPageComponent } from './views/product-edit-page/product-edit-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,17 @@ import { ProductsPageComponent } from './views/products-page/products-page.compo
     ProductComponent,
     ProductListComponent,
     ProductDetailsPageComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    ProductDetailsComponent,
+    ProductEditPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    NgSelectModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

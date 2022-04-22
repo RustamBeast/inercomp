@@ -1,1 +1,8 @@
-<p>product-details-page works!</p>
+<div class="wrapper">
+    <button class="details-button" routerLink="/products" type="button">
+        Back to products
+    </button>
+    <div *ngIf="product">
+        <app-product-details [product]="product"></app-product-details>
+    </div>
+</div>
