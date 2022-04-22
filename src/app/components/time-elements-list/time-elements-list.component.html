@@ -1,5 +1,5 @@
 <ul>
-    <li *ngfor="let element of elements">
-        <app-time-element></app-time-element>
+    <li *ngFor="let element of timeElements">
+        <app-time-element [timeElement]="element"></app-time-element>
     </li>
 </ul>

@@ -1,3 +1,9 @@
+<div *ngIf="success && this.product">
+    <button class="details-button" routerLink="/products/{{product.id}}" type="button">
+        Back to {{product.productCode}}
+    </button>
+    The product has been successfully updated!
+</div>
 <div *ngIf="!success && this.product" class="wrapper">
     <button class="details-button" routerLink="/products/{{product.id}}" type="button">
         Back to {{product.productCode}}
@@ -44,6 +50,66 @@
                 bindValue="id" 
                 formControlName="currency">
             </ng-select>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="unit">Unit</label>
+            <input class="form-control" formControlName="unit" id="unit" name="unit"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="resolution">Resolution</label>
+            <input class="form-control" formControlName="resolution" id="resolution" name="resolution"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="priceType">Price Type</label>
+            <input class="form-control" formControlName="priceType" id="priceType" name="priceType"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="marketArea">Market Area</label>
+            <input class="form-control" formControlName="marketArea" id="marketArea" name="marketArea"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="resolution">Resolution</label>
+            <input class="form-control" formControlName="resolution" id="resolution" name="resolution"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="exchange">Exchange</label>
+            <input class="form-control" formControlName="exchange" id="exchange" name="exchange"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="product">Product</label>
+            <input class="form-control" formControlName="product" id="product" name="product"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="timeZone">Time Zone</label>
+            <input class="form-control" formControlName="timeZone" id="timeZone" name="timeZone"
+                   type="text"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="startDate">Start Date</label>
+            <input class="form-control" formControlName="startDate" id="startDate" name="startDate"
+                   type="date"/>
+        </div>
+
+        <div class="custom-input-fields">
+            <label for="endDate">End Date</label>
+            <input class="form-control" formControlName="endDate" id="endDate" name="endDate"
+                   type="date"/>
         </div>
   
         <div>

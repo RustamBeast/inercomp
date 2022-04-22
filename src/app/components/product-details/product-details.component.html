@@ -1,26 +1,32 @@
 <div *ngIf="product" class="wrapper__desc">
-    <h1>{{product.productCode}}</h1>
-    <span>Source Id: {{product.sourceId}}</span>
-    <span>Data source: {{product.dataSource}}</span>
-    <ul>
-        <li>Description: {{product.description ? product.description : 'No description available'}}</li>
-        <li>Delivery Start: {{product.deliveryStart ? product.deliveryStart.toLocaleString() : 'No information available'}}</li>
-        <li>Delivery End: {{product.deliveryEnd ? product.deliveryEnd.toLocaleString() : 'No information available'}}</li>
-        <li>Trading Start: {{product.tradingStart ? product.tradingStart.toLocaleString() : 'No information available'}}</li>
-        <li>Trading End: {{product.tradingEnd ? product.tradingEnd.toLocaleString() : 'No information available'}}</li>
-        <li>Created: {{product.created ? product.created.toLocaleString() : 'No information available'}}</li>
-        <li>Updated: {{product.updated ? product.updated.toLocaleString() : 'No information available'}}</li>
-        <li>Currency: {{product.currency}}</li>
-        <li>Unit: {{product.unit}}</li>
-        <li>Resolution: {{product.resolution}}</li>
-        <li>Price Type: {{product.priceType}}</li>
-        <li>Market Area: {{product.marketArea}}</li>
-        <li>Exchange: {{product.exchange}}</li>
-        <li>Product: {{product.product}}</li>
-        <li>Time Zone: {{product.timeZone}}</li>
-        <li>Start Date: {{product.startDate.toLocaleString()}}</li>
-        <li>End Date: {{product.endDate.toLocaleString()}}</li>
-        <li><button routerLink="/products/{{product.id}}/edit" class="edit-button" type="button">Edit</button></li>
-    </ul>
+    <div class="column">
+        <h1>{{product.productCode}}</h1>
+        <span>Source Id: {{product.sourceId}}</span>
+        <span>Data source: {{product.dataSource}}</span>
+        <ul>
+            <li>Description: {{product.description ? product.description : 'No description available'}}</li>
+            <li>Delivery Start: {{product.deliveryStart ? product.deliveryStart.toLocaleString() : 'No information available'}}</li>
+            <li>Delivery End: {{product.deliveryEnd ? product.deliveryEnd.toLocaleString() : 'No information available'}}</li>
+            <li>Trading Start: {{product.tradingStart ? product.tradingStart.toLocaleString() : 'No information available'}}</li>
+            <li>Trading End: {{product.tradingEnd ? product.tradingEnd.toLocaleString() : 'No information available'}}</li>
+            <li>Created: {{product.created ? getNormalDate(product.created.toLocaleString()) : 'No information available'}}</li>
+            <li>Updated: {{product.updated ? getNormalDate(product.updated.toLocaleString()) : 'No information available'}}</li>
+            <li>Currency: {{product.currency}}</li>
+            <li>Unit: {{product.unit}}</li>
+            <li>Resolution: {{product.resolution}}</li>
+            <li>Price Type: {{product.priceType}}</li>
+            <li>Market Area: {{product.marketArea}}</li>
+            <li>Exchange: {{product.exchange}}</li>
+            <li>Product: {{product.product}}</li>
+            <li>Time Zone: {{product.timeZone}}</li>
+            <li>Start Date: {{product.startDate.toLocaleString()}}</li>
+            <li>End Date: {{product.endDate.toLocaleString()}}</li>
+            <li><button routerLink="/products/{{product.id}}/edit" class="edit-button" type="button">Edit</button></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Time series values</h2>
+        <app-time-elements-list [timeElements]="product.values"></app-time-elements-list>
+    </div>
 </div>
 

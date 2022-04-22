@@ -15,4 +15,8 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getNormalDate(date: string) {
+    return date.split('.')[0].split('T')[0] + ' at ' + date.split('.')[0].split('T')[1];
+  }
+
 }

@@ -79,6 +79,7 @@ export class ProductEditPageComponent implements OnInit {
                                         this.productForm.controls['endDate'].value,
                                         this.product.values));
     }
+    this.success = true;
   }
 
 }
