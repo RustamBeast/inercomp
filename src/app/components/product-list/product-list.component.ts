@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductDetails } from 'src/app/entities/product_details';
 
 @Component({
@@ -8,7 +8,7 @@ import { ProductDetails } from 'src/app/entities/product_details';
 })
 export class ProductListComponent implements OnInit {
 
-  products: ProductDetails[] | undefined;
+  @Input() products: ProductDetails[] | undefined;
 
   constructor() { }
 

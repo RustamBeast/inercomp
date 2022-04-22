@@ -1,3 +1,5 @@
-<div *ngIf="product">
-    <h2>{{product.productCode}}</h2>
+<div *ngIf="product" >
+    <button class="details-button" routerLink="/products/{{product.id}}" type="button">
+        {{product.productCode}}
+      </button>
 </div>

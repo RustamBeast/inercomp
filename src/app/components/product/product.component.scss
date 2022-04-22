@@ -1,0 +1,13 @@
+.details-button {
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-radius: 3px;
+    color: #fafafa;
+    font-size: 18px;
+    background-color: rgb(147, 130, 226);
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(80, 64, 150);
+    }
+}

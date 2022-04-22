@@ -1,3 +1,5 @@
+import { TimeElement } from "./time_element";
+
 export class ProductDetails {
     constructor(
         public id: number,
@@ -7,7 +9,8 @@ export class ProductDetails {
         public dataSource: string,
         public deliveryStart: Date,
         public deliveryEnd: Date,
-        public tradingStart: Date,
+        public tradingStart: Date | null,
+        public tradingEnd: Date | null,
         public created: Date,
         public updated: Date,
         public currency: string,
@@ -19,6 +22,7 @@ export class ProductDetails {
         public product: string,
         public timeZone: string,
         public startDate: Date,
-        public endDate: Date
+        public endDate: Date,
+        public values: TimeElement[]
     ) {}
 }
