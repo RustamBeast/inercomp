@@ -9,6 +9,7 @@ import { ProductDetails } from 'src/app/entities/product_details';
 export class ProductDetailsComponent implements OnInit {
 
   @Input() product: ProductDetails | null | undefined;
+  show = false;
 
   constructor() { }
 

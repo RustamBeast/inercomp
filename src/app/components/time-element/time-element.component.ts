@@ -15,4 +15,8 @@ export class TimeElementComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getNormalDate(date: string) {
+    return date.split('.')[0].split('T')[0] + ', ' + date.split('.')[0].split('T')[1];
+  }
+
 }

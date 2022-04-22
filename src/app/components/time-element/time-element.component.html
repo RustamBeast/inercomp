@@ -1,1 +1,7 @@
-<p>time-element works!</p>
+<div *ngIf="this.timeElement">
+    <span>Valid from: {{getNormalDate(this.timeElement.validFrom.toLocaleString())}}</span>
+    <span>Valid to: {{getNormalDate(this.timeElement.validTo.toLocaleString())}}</span>
+    <span>Value: {{this.timeElement.value ? this.timeElement.value : 'No value'}}</span>
+    <span>Low: {{this.timeElement.low ? this.timeElement.low : 'No value'}}</span>
+    <span>High: {{this.timeElement.high ? this.timeElement.high : 'No value'}}</span>
+</div>

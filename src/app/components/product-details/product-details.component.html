@@ -24,9 +24,11 @@
             <li><button routerLink="/products/{{product.id}}/edit" class="edit-button" type="button">Edit</button></li>
         </ul>
     </div>
-    <div>
+    <div class="time-series">
         <h2>Time series values</h2>
-        <app-time-elements-list [timeElements]="product.values"></app-time-elements-list>
+        <button class="show" *ngIf="!this.show" (click)="this.show = !this.show">Show</button>
+        <button class="show" *ngIf="this.show" (click)="this.show = !this.show">Hide</button>
+        <app-time-elements-list *ngIf="this.show"[timeElements]="product.values"></app-time-elements-list>
     </div>
 </div>
 
